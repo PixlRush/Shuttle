@@ -160,7 +160,7 @@ function updateTime() {
 	}
 
 	document.getElementById("timeUntil").innerHTML = deltaOut
-	document.getElementById("time").innerHTML = next.getHours() + ":" + next.getMinutes()
+	document.getElementById("time").innerHTML = next.getHours() + ":" + ((next.getMinutes() < 10) ? "0" + next.getMinutes() : next.getMinutes())
 
 	// Pass the Interval Back
 	setInterval(updateDates, 100)
