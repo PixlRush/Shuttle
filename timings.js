@@ -151,9 +151,9 @@ function updateTime() {
 	// Change Background Colour depending on sDelta
 	if(sDelta > 60 * 10){ //ok
 		document.getElementById("body").className = "ok"
+		document.getElementById("body").style.backgroundColor = "hsl(120, 60%, 47%)"
 	}else{
-		document.getElementById("body").className = "custom"
-		var hue = Math.round(30 + 90 * (sDelta / 600))
+		var hue = Math.round(120 * (sDelta / 600))
 		document.getElementById("body").style.backgroundColor = "hsl(" + hue.toString() + ", 60%, 47%)"
 	}
 

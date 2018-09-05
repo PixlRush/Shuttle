@@ -8,7 +8,6 @@ body{
 }
 
 body.ok{background-color: hsl(120, 60%, 47%);}
-body.custom{background-color: hsl(180, 60%, 47%);}
 
 header{
 	text-align: center;
