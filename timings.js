@@ -151,12 +151,10 @@ function updateTime() {
 	// Change Background Colour depending on sDelta
 	if(sDelta > 60 * 10){ //ok
 		document.getElementById("body").className = "ok"
-	}else if(sDelta > 60 * 5){ //close
-		document.getElementById("body").className = "close"
-	}else if(sDelta > 60){ //warn
-		document.getElementById("body").className = "warn"
-	}else{ //danger
-		document.getElementById("body").className = "danger"
+	}else{
+		document.getElementById("body").className = "custom"
+		var hue = Math.round(30 + 90 * (sDelta / 600))
+		document.getElementById("body").style.backgroundColor = "hsl(" + hue.toString() + ", 60%, 47%)"
 	}
 
 	document.getElementById("timeUntil").innerHTML = deltaOut
